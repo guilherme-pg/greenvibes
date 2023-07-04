@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    color: whitesmoke;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.input_write {
+    background-color: whitesmoke;
+    padding: 5px;
+    outline: none;
+    color: #808000;
+}
+.general_button {
+    background-color: #808000;
+}
+.general_button:hover {
+    background-color: #408000;
+}
+
+
+
+/* HEADER */
+header {
+    background-color: #808000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+.logo_zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+.logo_zone a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+}
+.search_zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.search_zone form {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+}
+.search_zone input {
+    width: 90%;
+}
+.search_zone_button {
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+    color: black;
+}
+.resources_zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+}
+.resources_zone_button {
+    background-color: #808000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    cursor: pointer;
+}
+.resources_zone_button:hover {
+    background-color: #408000;
+}
+header a {
+    cursor: pointer;
+}
+
+
+
+
+/* ACCOUNT = ENTER OR CREATE */
+.account_manage_display {
+    background-color: whitesmoke;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction:column;
+    height: 50%;
+    width: 30%;
+    position: fixed;
+}
+.x_close_window {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+#x_close_window {
+    font-size: 20px;
+    padding: 5px;
+    color: #808000;
+    border-radius: 5px;
+    margin: 15px 15px 0 0;
+    cursor: pointer;
+}
+.account_manage_display form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.login_create_button {
+    cursor: pointer;
+    padding: 5px 0 5px 0;
+}
+.account_manage_display form input {
+    width: 70%;
+    margin: 5px 0 10px 0;
+    border-bottom: 1px solid #808000;
+}
+.account_manage_display label {
+    color: #808000;
+}
+.account_manage_display a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #808000;
+    width: 100%;
+    height: 100px;
+}
+.footer_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+}
+.footer_button {
+    margin: 30px 30px 0 30px;
+}
+.footer_links svg {
+    fill: whitesmoke;
+    height: 40px;
+    transition: text-shadow 1s;
+}
+.footer_links svg:active,
+.footer_links svg:hover  {
+    filter: drop-shadow(0 0 1px #FAFAD2);
+}
+footer p {
+    color: whitesmoke;
+    font-size: 12px;
+    margin: 0 0 10px 20px;
+}
+.icon_link {
+    color: white;
+    width: 40px;
+    height: 40px;
+}
