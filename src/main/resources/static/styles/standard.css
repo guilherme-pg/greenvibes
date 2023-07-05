@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* GENERAL FORMATS */
 .input_write {
     background-color: whitesmoke;
     padding: 5px;
@@ -17,11 +18,24 @@ body {
 }
 .general_button {
     background-color: #808000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 0 5px 0;
+    width: 60%;
+    margin: 25px 0 25px 0;
 }
 .general_button:hover {
-    background-color: #408000;
+    background-color: #737300;
 }
-
+.form_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 15px 0;
+}
 
 
 /* HEADER */
@@ -84,7 +98,7 @@ header {
     cursor: pointer;
 }
 .resources_zone_button:hover {
-    background-color: #408000;
+    background-color: #737300;
 }
 header a {
     cursor: pointer;
@@ -164,7 +178,7 @@ footer {
     margin: 30px 30px 0 30px;
 }
 .footer_links svg {
-    fill: whitesmoke;
+    fill: #FFFFF0;
     height: 40px;
     transition: text-shadow 1s;
 }
@@ -173,7 +187,7 @@ footer {
     filter: drop-shadow(0 0 1px #FAFAD2);
 }
 footer p {
-    color: whitesmoke;
+    color: #FFFFF0;
     font-size: 12px;
     margin: 0 0 10px 20px;
 }

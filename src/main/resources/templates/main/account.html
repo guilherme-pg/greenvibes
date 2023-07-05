@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+    <link rel="stylesheet"  th:href="@{styles/account.css}">
+    <title>Account</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <main>
+
+            <div class="menu_account">
+                <div class="menu_account_option">
+                    <input type="radio" class="input_option" id="option_products" name="option_account" value="account_products" checked>
+                    <label class="button_menu_account" for="option_products">My Products</label>
+                </div>
+
+                <div class="menu_account_option">
+                    <input type="radio" class="input_option" id="option_sales" name="option_account" value="account_sales">
+                    <label class="button_menu_account" for="option_sales">My Sales</label>
+                </div>
+                <div class="menu_account_option">
+                    <input type="radio" class="input_option" id="option_settings" name="option_account" value="account_settings">
+                    <label class="button_menu_account" for="option_settings">Settings</label>
+                </div>
+            </div>
+
+
+            <div class="display_account_contents">
+
+                <div class="account_content content_products" id="account_products">
+                    <h2>My Products</h2>
+                </div>
+
+                <div class="account_content content_sales hidden" id="account_sales">
+                    <h2>My Sales</h2>
+                </div>
+
+                <div class="account_content content_settings hidden" id="account_settings">
+                    <h2>Settings</h2>
+
+                    <div class="account_settings_list">
+                        <p>list to change user registration</p>
+
+                        <input class="general_button" type="submit" value="Update">
+                    </div>
+
+                    <div class="account_manage">
+                        <button class="general_button">Log Out</button>
+                        <button class="general_button">Delete Account</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <script type="text/javascript" th:src="@{js/account.js}"></script>
+    </div>
+</body>
+</html>

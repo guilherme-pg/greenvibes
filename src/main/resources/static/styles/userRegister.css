@@ -1,9 +1,37 @@
 main {
-    background-color: green;
+    background-color: #FFFFF0;
     display: flex;
-}
-.home_zone {
-    display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+}
+.user_form {
+    background-color: #bfbf7f;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 75%;
+    width: 40%;
+}
+.label_input_zone {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.input_write {
+    width: 75%
+}
+.submit_button_zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.general_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 0 5px 0;
+    width: 60%
 }

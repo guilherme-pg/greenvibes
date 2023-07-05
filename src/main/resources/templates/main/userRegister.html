@@ -7,17 +7,48 @@
 <body>
     <div layout:fragment="content">
         <main>
-            <div class="home_zone">
+            <form class="user_form">
+                <div class="form_title">
+                    <h2>User Register</h2>
+                </div>
 
-            </div>
+                <div>
+                    <div class="label_input_zone">
+                        <label for="name_input">Name: </label>
+                        <input class="input_write" id="name_input">
+                    </div>
 
-            <div class="home_zone">
+                    <div class="label_input_zone">
+                        <label for="email_input">E-mail:</label>
+                        <input class="input_write" id="email_input">
+                    </div>
 
-            </div>
+                    <div class="label_input_zone">
+                        <label for="password_input">Password:</label>
+                        <input class="input_write" id="password_input">
+                    </div>
 
-            <div class="home_zone">
+                    <div class="label_input_zone">
+                        <label for="conf_password_input">Confirm Password:</label>
+                        <input class="input_write" id="conf_password_input">
+                    </div>
 
-            </div>
+                    <div class="label_input_zone">
+                        <label for="address_input">Address:</label>
+                        <input class="input_write" id="address_input">
+                    </div>
+
+                    <div class="label_input_zone">
+                        <label for="birthday_input">Birthday:</label>
+                        <input class="input_write" id="birthday_input">
+                    </div>
+                </div>
+
+                <div class="submit_button_zone">
+                    <input class="general_button" type="submit" value="Register">
+                </div>
+
+            </form>
         </main>
     </div>
 </body>

@@ -1,0 +1,86 @@
+main {
+    background-color: #FFFFF0;
+    display: flex;
+    min-height: 100vh;
+}
+.menu_account {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 15%;
+}
+.display_account_contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.menu_account_option {
+    display: flex;
+    height: 40px;
+    width: 120px;
+}
+.input_option {
+    display: none;
+}
+.button_menu_account {
+    background-color: #808000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    transition: 0.2s;
+    padding: 5px;
+    cursor: pointer;
+}
+.button_menu_account:hover {
+    background-color: #737300;
+    padding-left: 15px;
+}
+
+/* MENU ACCOUNT DISPLAY: my products, my sales and settings */
+.account_content h2 {
+    margin: 25px 0 25px 0;
+}
+.content_sales h2, .content_products h2 {
+    color: #808000;
+}
+.content_settings {
+    background-color: #bfbf7f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+}
+.hidden {
+    display: none;
+}
+.account_settings_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.account_settings_list input {
+    width: 25%;
+}
+.account_manage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.account_content button {
+    background-color: #808000;
+    color: #FFFFF0;
+    padding: 5px 10px 5px 10px;
+    width: 15%;
+    margin: 10px;
+}
+.account_content button:hover {
+    background-color: #737300;
+}
