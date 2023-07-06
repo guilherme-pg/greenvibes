@@ -7,50 +7,50 @@
 <body>
     <div layout:fragment="content">
         <main>
-            <form class="user_form">
+            <form class="user_form" id="user_form" action="/userRegister/user-register" method="post">
                 <div class="form_title">
                     <h2>User Register</h2>
                 </div>
 
                 <div>
                     <div class="label_input_zone">
-                        <label for="name_input">Name: </label>
-                        <input class="input_write" id="name_input">
+                        <label for="name_input">Name * </label>
+                        <input class="input_write" id="name_input" name="user_name" required>
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="email_input">E-mail:</label>
-                        <input class="input_write" id="email_input">
+                        <label for="email_input">E-mail *</label>
+                        <input class="input_write" id="email_input" name="user_email" required>
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="password_input">Password:</label>
-                        <input class="input_write" id="password_input">
+                        <label for="password_input">Password *</label>
+                        <input class="input_write" id="password_input" name="user_password" required>
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="conf_password_input">Confirm Password:</label>
-                        <input class="input_write" id="conf_password_input">
+                        <label for="conf_password_input">Confirm Password *</label>
+                        <input class="input_write" id="conf_password_input" required>
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="address_input">Address:</label>
-                        <input class="input_write" id="address_input">
+                        <label for="address_input">Address</label>
+                        <input class="input_write" id="address_input" name="user_address">
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="birthday_input">Birthday:</label>
-                        <input class="input_write" id="birthday_input">
+                        <label for="birthday_input">Birthday</label>
+                        <input class="input_write" id="birthday_input" name="user_birthday">
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="profession_input">Profession:</label>
-                        <input class="input_write" id="profession_input">
+                        <label for="profession_input">Profession</label>
+                        <input class="input_write" id="profession_input" name="user_profession">
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="level_schooling_input">Level Schooling:</label>
-                        <select class="input_write" name="cars" id="level_schooling_input">
+                        <label for="level_schooling_input">Level Schooling</label>
+                        <select class="input_write" name="user_level_schooling" id="level_schooling_input">
                             <option value="child_education">Child Education</option>
                             <option value="elementary">Elementary</option>
                             <option value="elementary_incomplete">Elementary Incomplete</option>
@@ -63,18 +63,18 @@
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="gender_input">Gender:</label>
-                        <input class="input_write" id="gender_input">
+                        <label for="gender_input">Gender</label>
+                        <input class="input_write" id="gender_input" name="user_gender">
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="race_input">Race:</label>
-                        <input class="input_write" id="race_input">
+                        <label for="race_input">Race</label>
+                        <input class="input_write" id="race_input" name="user_race">
                     </div>
 
                     <div class="label_input_zone">
-                        <label for="photo_input">Profile Picture:</label>
-                        <input class="input_image" type="file" id="photo_input" accept="image/*">
+                        <label for="photo_input">Profile Picture</label>
+                        <input class="input_image" type="file" id="photo_input" name="user_photo" accept="image/*">
                     </div>
                 </div>
 
@@ -84,6 +84,8 @@
 
             </form>
         </main>
+
+        <script type="text/javascript" th:src="@{js/userRegister.js}"></script>
     </div>
 </body>
 </html>
