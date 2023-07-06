@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     text-decoration: none;
+    transition: 0.2s;
 }
 body {
     display: flex;
@@ -111,15 +112,19 @@ header a {
 
 /* ACCOUNT = ENTER OR CREATE */
 .account_manage_display {
-    background-color: whitesmoke;
+    background-color: #bfbf7f;
     position: fixed;
+    z-index: 9999;
+    top: 30%;
+    left: 30%;
+    width: 500px;
     display: none;
+}
+.account_manage_zone {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction:column;
-    height: 50%;
-    width: 30%;
-
+    justify-content: center;
+    flex-direction: column;
 }
 .x_close_window {
     display: flex;
@@ -127,12 +132,17 @@ header a {
     width: 100%;
 }
 #x_close_window {
+    background-color: #FFFFF0;
     font-size: 20px;
     padding: 5px;
     color: #808000;
     border-radius: 5px;
     margin: 15px 15px 0 0;
     cursor: pointer;
+}
+#x_close_window:hover {
+    background-color: #808000;
+    color: #FFFFF0;
 }
 .account_manage_display form {
     display: flex;
@@ -145,10 +155,13 @@ header a {
     cursor: pointer;
     padding: 5px 0 5px 0;
 }
+.account_manage_zone .input_write {
+    background-color: #FFFFF0;
+}
 .account_manage_display form input {
     width: 70%;
     margin: 5px 0 10px 0;
-    border-bottom: 1px solid #808000;
+
 }
 .account_manage_display label {
     color: #808000;
@@ -160,6 +173,9 @@ header a {
     width: 70%;
 
     margin-bottom: 30px;
+}
+.account_manage_zone .general_button {
+    color: #FFFFF0;
 }
 
 

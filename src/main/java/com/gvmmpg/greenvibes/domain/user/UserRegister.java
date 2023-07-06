@@ -5,5 +5,10 @@ public record UserRegister(String user_name,
                            String user_password,
                            String user_phone,
                            String user_birthday,
-                           String user_address) {
+                           String user_address,
+                           String user_profession,
+                           String user_level_schooling,
+                           String user_gender,
+                           String user_race,
+                           byte[] user_photo) {
 }

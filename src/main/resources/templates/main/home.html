@@ -9,21 +9,23 @@
 
         <main>
             <div class="account_manage_display" id="account_manage_display">
-                <div class="x_close_window">
-                    <button id="x_close_window">X</button>
+                <div class="account_manage_zone">
+                    <div class="x_close_window">
+                        <button id="x_close_window">X</button>
+                    </div>
+
+                    <form>
+                        <label for="input_login">Login</label>
+                        <input class="input_write" id="input_login">
+                        <label for="input_password">Password</label>
+                        <input class="input_write" id="input_password">
+                        <input class="general_button login_create_button" type="submit" value="Enter">
+                    </form>
+
+                    <p> or </p>
+
+                    <a class="general_button login_create_button" th:href="@{/userRegister}">Create Account</a>
                 </div>
-
-                <form>
-                    <label for="input_login">Login</label>
-                    <input class="input_write" id="input_login">
-                    <label for="input_password">Password</label>
-                    <input class="input_write" id="input_password">
-                    <input class="general_button login_create_button" type="submit" value="Enter">
-                </form>
-
-                <p> or </p>
-
-                <a class="general_button login_create_button" th:href="@{/userRegister}">Create Account</a>
 
             </div>
 

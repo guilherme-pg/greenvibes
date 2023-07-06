@@ -3,7 +3,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 .user_form {
     background-color: #bfbf7f;
@@ -12,6 +12,13 @@ main {
     flex-direction: column;
     height: 75%;
     width: 40%;
+    margin: 70px 0 50px 0;
+}
+.user_form label {
+    margin-bottom: 2px;
+}
+.user_form h2, .user_form label, .user_form select {
+    color: #737300;
 }
 .label_input_zone {
     display: flex;
@@ -20,6 +27,9 @@ main {
 }
 .input_write {
     width: 75%
+}
+.input_image {
+    color: #737300;
 }
 .submit_button_zone {
     display: flex;
