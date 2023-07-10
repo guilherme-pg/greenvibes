@@ -6,6 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.sql.Blob;
+import java.sql.SQLException;
 
 @Controller
 @RequestMapping("/userRegister")
@@ -17,11 +23,22 @@ public class UserRegisterController {
     }
 
     @PostMapping("/user-register")
-    public String registerUser(UserRegister data) {
-        System.out.println("data -================>>>>>>>>>>>>> " + data);
+    public String registerUser(@RequestPart("user_photo") MultipartFile user_photo, @RequestPart("user") UserRegister data) {
+        System.out.println(data);
         var user = new User(data);
-        System.out.println("POST POST POST POST POST POST POST POST POST POST POST POST POST POST POST POST POST");
-        System.out.println(user);
+
+        if (user_photo != null && user_photo.getSize() > 0) {
+            try {
+                byte[] photoBytes = user_photo.getBytes();
+                Blob photoBlob = new javax.sql.rowset.serial.SerialBlob(user_photo.getBytes());
+                user.setUser_photo(photoBlob);
+
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+            
+        }
+
         return "redirect:/account";
     }
 }
