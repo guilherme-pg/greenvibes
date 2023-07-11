@@ -19,8 +19,8 @@ public class User {
     private String user_level_schooling;
     private String user_gender;
     private String user_race;
-    @Lob
-    private Blob user_image;
+    // @Lob
+    // private Blob user_image;
 
 
     public User(UserRegister data) {
@@ -33,7 +33,7 @@ public class User {
         this.user_level_schooling = data.user_level_schooling();
         this.user_gender = data.user_gender();
         this.user_race = data.user_race();
-        this.user_image = data.user_image();
+        // this.user_image = data.user_image();
     }
 
     @Override
@@ -48,7 +48,6 @@ public class User {
                 ", user_level_schooling='" + user_level_schooling + '\'' +
                 ", user_gender='" + user_gender + '\'' +
                 ", user_race='" + user_race + '\'' +
-                ", user_image='" + user_image + '\'' +
                 '}';
     }
 
@@ -83,9 +82,7 @@ public class User {
     public String getUser_race() {
         return user_race;
     }
-    public Blob getUser_photo() {
-        return user_image;
-    }
+    // public Blob getUser_photo() {return user_image;}
 
     // SETTERS
     public void setId(Long id) {
@@ -118,7 +115,5 @@ public class User {
     public void setUser_race(String user_race) {
         this.user_race = user_race;
     }
-    public void setUser_image(Blob user_image) {
-        this.user_image = user_image;
-    }
+    // public void setUser_image(Blob user_image) {this.user_image = user_image;}
 }

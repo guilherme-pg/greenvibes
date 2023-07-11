@@ -10,6 +10,7 @@ public record UserRegister(String user_name,
                            String user_profession,
                            String user_level_schooling,
                            String user_gender,
-                           String user_race,
-                           Blob user_image) {
+                           String user_race
+                           // Blob user_image
+                            ) {
 }

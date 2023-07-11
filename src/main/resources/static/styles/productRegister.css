@@ -7,12 +7,16 @@ main {
 }
 .product_form {
     background-color: #bfbf7f;
+    color: #737300;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 75%;
     width: 40%;
     margin: 75px 0 40px 0;
+}
+.product_form label {
+    margin-bottom: 2px;
 }
 .label_input_zone {
     display: flex;
@@ -27,4 +31,7 @@ main {
     align-items: center;
     justify-content: center;
     margin: 15px 0 15px 0;
+}
+.submit_button_zone input {
+    color: #FFFFF0;
 }
