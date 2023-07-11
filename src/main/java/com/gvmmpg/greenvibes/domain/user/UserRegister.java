@@ -11,5 +11,5 @@ public record UserRegister(String user_name,
                            String user_level_schooling,
                            String user_gender,
                            String user_race,
-                           Blob user_photo) {
+                           Blob user_image) {
 }
