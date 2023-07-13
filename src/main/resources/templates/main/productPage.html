@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html xmlns:th="http://thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{template.html}">
 <head>
+    <link rel="stylesheet"  th:href="@{styles/productPage.css}">
     <title>Product</title>
 </head>
 <body>
     <div layout:fragment="content">
+        <main>
+            <p>PRODUCT PAGE</p>
+        </main>
 
     </div>
 </body>

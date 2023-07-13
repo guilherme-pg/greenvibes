@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
 <head>
+    <link rel="stylesheet"  th:href="@{styles/errorPage.css}">
     <title>Error</title>
 </head>
 <body>
-
+    <div layout:fragment="content">
+        <main>
+            <p>ERROR PAGE</p>
+        </main>
+    </div>
 </body>
 </html>
