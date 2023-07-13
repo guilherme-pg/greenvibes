@@ -9,7 +9,9 @@ public record ProductRegister(String product_name,
                               String product_model,
                               Integer product_year,
                               Integer product_weight,
-                              String product_description
+                              String product_description,
+                              Double product_price,
+                              Integer product_stock
                               //Blob product_image
                                 ) {
 }

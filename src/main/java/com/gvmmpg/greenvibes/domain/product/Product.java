@@ -18,6 +18,8 @@ public class Product {
     private Integer product_year;
     private Integer product_weight;
     private String product_description;
+    private Double product_price;
+    private Integer product_stock;
     // @Lob
     // private Blob product_image;
 
@@ -30,6 +32,8 @@ public class Product {
         this.product_year = data.product_year();
         this.product_weight = data.product_weight();
         this.product_description = data.product_description();
+        this.product_price = data.product_price();
+        this.product_stock = data.product_stock();
         // this.product_image = data.product_image();
     }
 
@@ -44,6 +48,8 @@ public class Product {
                 ", product_year=" + product_year +
                 ", product_weight=" + product_weight +
                 ", product_description='" + product_description + '\'' +
+                ", product_price=" + product_price +
+                ", product_stock=" + product_stock +
                 '}';
     }
 
@@ -75,6 +81,12 @@ public class Product {
     public String getProduct_description() {
         return product_description;
     }
+    public Double getProduct_price() {
+        return product_price;
+    }
+    public Integer getProduct_stock() {
+        return product_stock;
+    }
     // public Blob getProduct_image() {return product_image;}
 
     // SETTERS
@@ -104,6 +116,12 @@ public class Product {
     }
     public void setProduct_description(String product_description) {
         this.product_description = product_description;
+    }
+    public void setProduct_price(Double product_price) {
+        this.product_price = product_price;
+    }
+    public void setProduct_stock(Integer product_stock) {
+        this.product_stock = product_stock;
     }
     // public void setProduct_image(Blob product_image) {this.product_image = product_image;}
 }

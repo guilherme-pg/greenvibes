@@ -3,6 +3,7 @@ package com.gvmmpg.greenvibes.domain.user;
 import jakarta.persistence.*;
 
 import java.sql.Blob;
+import java.util.Date;
 
 @Entity
 @Table(name="user")
@@ -13,7 +14,9 @@ public class User {
     private String user_name;
     private String user_email;
     private String user_password;
-    private String user_birthday;
+    private Date user_birthday;
+    private String user_country;
+    private String user_city;
     private String user_address;
     private String user_profession;
     private String user_level_schooling;
@@ -28,6 +31,8 @@ public class User {
         this.user_email = data.user_email();
         this.user_password = data.user_password();
         this.user_birthday = data.user_birthday();
+        this.user_country = data.user_country();
+        this.user_city = data.user_city();
         this.user_address = data.user_address();
         this.user_profession = data.user_profession();
         this.user_level_schooling = data.user_level_schooling();
@@ -44,6 +49,8 @@ public class User {
                 ", user_password='" + user_password + '\'' +
                 ", user_birthday='" + user_birthday + '\'' +
                 ", user_address='" + user_address + '\'' +
+                ", user_country='" + user_country + '\'' +
+                ", user_city='" + user_city + '\'' +
                 ", user_profession='" + user_profession + '\'' +
                 ", user_level_schooling='" + user_level_schooling + '\'' +
                 ", user_gender='" + user_gender + '\'' +
@@ -64,7 +71,7 @@ public class User {
     public String getUser_password() {
         return user_password;
     }
-    public String getUser_birthday() {
+    public Date getUser_birthday() {
         return user_birthday;
     }
     public String getUser_address() {
@@ -82,6 +89,12 @@ public class User {
     public String getUser_race() {
         return user_race;
     }
+    public String getUser_country() {
+        return user_country;
+    }
+    public String getUser_city() {
+        return user_city;
+    }
     // public Blob getUser_photo() {return user_image;}
 
     // SETTERS
@@ -97,7 +110,7 @@ public class User {
     public void setUser_password(String user_password) {
         this.user_password = user_password;
     }
-    public void setUser_birthday(String user_birthday) {
+    public void setUser_birthday(Date user_birthday) {
         this.user_birthday = user_birthday;
     }
     public void setUser_address(String user_address) {
@@ -114,6 +127,12 @@ public class User {
     }
     public void setUser_race(String user_race) {
         this.user_race = user_race;
+    }
+    public void setUser_country(String user_country) {
+        this.user_country = user_country;
+    }
+    public void setUser_city(String user_city) {
+        this.user_city = user_city;
     }
     // public void setUser_image(Blob user_image) {this.user_image = user_image;}
 }
