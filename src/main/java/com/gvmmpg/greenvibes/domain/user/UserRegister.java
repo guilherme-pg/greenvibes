@@ -1,12 +1,13 @@
 package com.gvmmpg.greenvibes.domain.user;
 
 import java.sql.Blob;
+import java.time.LocalDate;
 import java.util.Date;
 
 public record UserRegister(String user_name,
                            String user_email,
                            String user_password,
-                           Date user_birthday,
+                           LocalDate user_birthday,
                            String user_country,
                            String user_city,
                            String user_address,

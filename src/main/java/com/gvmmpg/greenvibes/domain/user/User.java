@@ -1,8 +1,11 @@
 package com.gvmmpg.greenvibes.domain.user;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Blob;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -11,20 +14,31 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
     private String user_name;
+    @Column(name = "email")
     private String user_email;
+    @Column(name = "password")
     private String user_password;
-    private Date user_birthday;
+    @Column(name = "birthday")
+    private LocalDate user_birthday;
+    @Column(name = "country")
     private String user_country;
+    @Column(name = "city")
     private String user_city;
+    @Column(name = "address")
     private String user_address;
+    @Column(name = "profession")
     private String user_profession;
+    @Column(name = "schooling_level")
     private String user_level_schooling;
+    @Column(name = "gender")
     private String user_gender;
+    @Column(name = "race")
     private String user_race;
     // @Lob
+    // @Column(name = "image")
     // private Blob user_image;
-
 
     public User(UserRegister data) {
         this.user_name = data.user_name();
@@ -40,6 +54,8 @@ public class User {
         this.user_race = data.user_race();
         // this.user_image = data.user_image();
     }
+
+    public User() {}
 
     @Override
     public String toString() {
@@ -71,7 +87,7 @@ public class User {
     public String getUser_password() {
         return user_password;
     }
-    public Date getUser_birthday() {
+    public LocalDate getUser_birthday() {
         return user_birthday;
     }
     public String getUser_address() {
@@ -110,7 +126,7 @@ public class User {
     public void setUser_password(String user_password) {
         this.user_password = user_password;
     }
-    public void setUser_birthday(Date user_birthday) {
+    public void setUser_birthday(LocalDate user_birthday) {
         this.user_birthday = user_birthday;
     }
     public void setUser_address(String user_address) {

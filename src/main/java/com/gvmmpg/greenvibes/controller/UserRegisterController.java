@@ -24,13 +24,20 @@ public class UserRegisterController {
 
     @PostMapping("/user-register")
     public String registerUser(@ModelAttribute UserRegister data) {
-        System.out.println(data);
-        var user = new User(data);
+        try {
+            System.out.println(data);
+            var user = new User(data);
 
-        // Check if the email already exists
-        boolean exists = userRepository.existsByAnotherPropertyName(user.getUser_email());
-        if (exists) {return "redirect:/register?error=email-exists";}
+            // Check if the email already exists
+            boolean exists = userRepository.existsByAnotherPropertyName(user.getUser_email());
+            if (exists) {return "redirect:/register?error=email-exists";}
 
-        return "redirect:/account";
+            userRepository.save(user);
+
+            return "redirect:/account";}
+
+        catch (Exception e) {
+            System.out.println(e);
+            return "redirect:/errorPage";}
     }
 }
