@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/account")
+@RequestMapping("/private/account")
 public class AccountController {
 
     @GetMapping
     public String loadAccount() {
-        return "main/account";
+        return "main/private/account";
     }
 }

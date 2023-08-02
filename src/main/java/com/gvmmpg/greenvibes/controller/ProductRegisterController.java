@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.Blob;
 
 @Controller
-@RequestMapping("/productRegister")
+@RequestMapping("/private/productRegister")
 public class ProductRegisterController {
 
     @Autowired
@@ -18,7 +18,7 @@ public class ProductRegisterController {
 
     @GetMapping
     public String loadProductRegister() {
-        return "main/productRegister";
+        return "main/private/productRegister";
     }
 
     @PostMapping("/product-register")

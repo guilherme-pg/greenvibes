@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/userSettings")
+@RequestMapping("/private/userSettings")
 public class UserSettingsController {
 
     @GetMapping
     public String loadUserSettings() {
-        return "main/userSettings";
+        return "main/private/userSettings";
     }
 }

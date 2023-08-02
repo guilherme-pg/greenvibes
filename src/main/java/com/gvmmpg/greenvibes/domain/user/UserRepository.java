@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    @Query("SELECT CASE WHEN COUNT(u) > 0 THEN true ELSE false END FROM User u WHERE u.user_email = :email")
-    boolean existsByAnotherPropertyName(@Param("email") String email);
+    // @Query("SELECT CASE WHEN COUNT(u) > 0 THEN true ELSE false END FROM User u WHERE u.user_email = :email")
+    // boolean existsByAnotherPropertyName(@Param("email") String email);
 
-    UserDetails findByLogin(String userlogin);
+    UserDetails findByLogin(String login);
 }

@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/cart")
+@RequestMapping("/public/cart")
 public class CartController {
 
     @GetMapping
     public String loadCart() {
-        return "main/cart";
+        return "main/public/cart";
     }
 }

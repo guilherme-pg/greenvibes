@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 @Controller
-@RequestMapping("/userRegister")
+@RequestMapping("/public/userRegister")
 public class UserRegisterController {
 
     @Autowired
@@ -19,7 +19,7 @@ public class UserRegisterController {
 
     @GetMapping
     public String loadUserRegister() {
-        return "main/userRegister";
+        return "main/public/userRegister";
     }
 
     @PostMapping("/user-register")
@@ -29,8 +29,8 @@ public class UserRegisterController {
             var user = new User(data);
 
             // Check if the email already exists
-            boolean exists = userRepository.existsByAnotherPropertyName(user.getUser_email());
-            if (exists) {return "redirect:/register?error=email-exists";}
+            // boolean exists = userRepository.existsByAnotherPropertyName(user.getUser_login());
+            // if (exists) {return "redirect:/register?error=email-exists";}
 
             userRepository.save(user);
 

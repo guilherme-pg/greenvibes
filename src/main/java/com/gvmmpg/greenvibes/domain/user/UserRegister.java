@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public record UserRegister(String user_name,
-                           String user_email,
+                           String user_login,
                            String user_password,
                            LocalDate user_birthday,
                            String user_country,

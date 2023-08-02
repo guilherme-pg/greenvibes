@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/productPage")
+@RequestMapping("/public/productPage")
 public class ProductPageController {
 
     @Autowired
@@ -15,7 +15,7 @@ public class ProductPageController {
 
     @GetMapping
     public String loadProductPage() {
-        return "main/productPage";
+        return "main/public/productPage";
     }
 
     // @GetMapping

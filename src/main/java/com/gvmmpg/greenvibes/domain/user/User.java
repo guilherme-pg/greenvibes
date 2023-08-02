@@ -1,8 +1,6 @@
 package com.gvmmpg.greenvibes.domain.user;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.sql.Blob;
 import java.time.LocalDate;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -23,9 +20,9 @@ public class User implements UserDetails {
     @Column(name = "name")
     private String user_name;
     @Column(name = "email")
-    private String user_email;
+    private String login;
     @Column(name = "password")
-    private String user_password;
+    private String password;
     @Column(name = "birthday")
     private LocalDate user_birthday;
     @Column(name = "country")
@@ -48,8 +45,8 @@ public class User implements UserDetails {
 
     public User(UserRegister data) {
         this.user_name = data.user_name();
-        this.user_email = data.user_email();
-        this.user_password = data.user_password();
+        this.login = data.user_login();
+        this.password = data.user_password();
         this.user_birthday = data.user_birthday();
         this.user_country = data.user_country();
         this.user_city = data.user_city();
@@ -67,8 +64,8 @@ public class User implements UserDetails {
     public String toString() {
         return "User{" +
                 "user_name='" + user_name + '\'' +
-                ", user_email='" + user_email + '\'' +
-                ", user_password='" + user_password + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
                 ", user_birthday='" + user_birthday + '\'' +
                 ", user_address='" + user_address + '\'' +
                 ", user_country='" + user_country + '\'' +
@@ -87,11 +84,11 @@ public class User implements UserDetails {
     public String getUser_name() {
         return user_name;
     }
-    public String getUser_email() {
-        return user_email;
+    public String getLogin() {
+        return login;
     }
-    public String getUser_password() {
-        return user_password;
+    public String getUser_Password() {
+        return password;
     }
     public LocalDate getUser_birthday() {
         return user_birthday;
@@ -126,11 +123,11 @@ public class User implements UserDetails {
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }
-    public void setUser_email(String user_email) {
-        this.user_email = user_email;
+    public void setLogin(String login) {
+        this.login = login;
     }
-    public void setUser_password(String user_password) {
-        this.user_password = user_password;
+    public void setPassword(String password) {
+        this.password = password;
     }
     public void setUser_birthday(LocalDate user_birthday) {
         this.user_birthday = user_birthday;
@@ -163,11 +160,11 @@ public class User implements UserDetails {
     }
     @Override
     public String getPassword() {
-        return user_password;
+        return password;
     }
     @Override
     public String getUsername() {
-        return user_email;
+        return login;
     }
     @Override
     public boolean isAccountNonExpired() {

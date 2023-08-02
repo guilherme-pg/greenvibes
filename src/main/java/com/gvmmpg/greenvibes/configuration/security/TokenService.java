@@ -21,11 +21,13 @@ public class TokenService {
     public String generateToken(User user) {
         try {
             var algorithm = Algorithm.HMAC256(secret);
-            return JWT.create()
-                    .withIssuer("API Vol.med")
-                    .withSubject(user.getUser_email())
+            var tokenPROV = JWT.create()
+                    .withIssuer("API greenvibes.gvmmpg")
+                    .withSubject(user.getLogin())
                     .withExpiresAt(dateExpiration())
                     .sign(algorithm);
+
+             return tokenPROV;
         } catch (JWTCreationException exception){
             throw new RuntimeException("Error in jwt token generation", exception);
         }
@@ -35,7 +37,7 @@ public class TokenService {
         try {
             var algorithm = Algorithm.HMAC256(secret);
             return JWT.require(algorithm)
-                    .withIssuer("API Voll.med")
+                    .withIssuer("greenvibes gvmmpg")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();
