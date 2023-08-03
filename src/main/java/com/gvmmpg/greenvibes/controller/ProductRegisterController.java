@@ -21,13 +21,13 @@ public class ProductRegisterController {
         return "main/private/productRegister";
     }
 
-    @PostMapping("/product-register")
+    @PostMapping("/private/product-register")
     public String registerProduct(@ModelAttribute ProductRegister data) {
         System.out.println(data);
 
         var product = new Product(data);
         System.out.println(product);
 
-        return "redirect:/productRegister";
+        return "redirect:/private/productRegister";
     }
 }

@@ -33,11 +33,12 @@ public class UserRegisterController {
             // if (exists) {return "redirect:/register?error=email-exists";}
 
             userRepository.save(user);
+            // after saved set as AUTHENTICATED and redirect to home
 
-            return "redirect:/account";}
+            return "redirect:/public/home";}
 
         catch (Exception e) {
             System.out.println(e);
-            return "redirect:/errorPage";}
+            return "redirect:/public/errorPage";}
     }
 }

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{template.html}">
 <head>
-    <link rel="stylesheet"  th:href="@{styles/login.css}">
+    <link rel="stylesheet"  th:href="@{/public/styles/login.css}">
     <title>Login</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 
                 <p> or </p>
 
-                <a class="general_button login_create_button" th:href="@{/userRegister}">Create Account</a>
+                <a class="general_button login_create_button" th:href="@{/public/userRegister}">Create Account</a>
 
             </div>
         </main>

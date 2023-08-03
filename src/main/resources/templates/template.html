@@ -10,7 +10,7 @@
 
     <header>
         <div class="logo_zone">
-            <a th:href="@{/home}">Green Vibes</a>
+            <a th:href="@{/public/home}">Green Vibes</a>
         </div>
 
         <div class="search_zone">
@@ -21,13 +21,13 @@
         </div>
 
         <div class="resources_zone">
-            <a class="resources_zone_button" href="/home#mission">Mission</a>
+            <a class="resources_zone_button" href="/public/home#mission">Mission</a>
 
-            <a class="resources_zone_button" href="/home#login">Login</a>
+            <a class="resources_zone_button" th:href="@{/public/login}">Login</a>
 
             <!--<button class="resources_zone_button" id="display_account">Account</button>-->
 
-            <a class="resources_zone_button" th:href="@{/cart}">Cart</a>
+            <a class="resources_zone_button" th:href="@{/public/cart}">Cart</a>
         </div>
     </header>
 
