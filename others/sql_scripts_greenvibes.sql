@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `greenvibes`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(125) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(25) NOT NULL,
+  `password` VARCHAR(225) NOT NULL,
   `birthday` DATE NOT NULL,
   `country` VARCHAR(45) NOT NULL,
   `city` VARCHAR(45) NOT NULL,
