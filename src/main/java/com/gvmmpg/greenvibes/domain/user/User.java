@@ -153,6 +153,7 @@ public class User implements UserDetails {
     public void setUser_city(String user_city) {
         this.user_city = user_city;
     }
+    // public void setUser_image(Blob user_image) {this.user_image = user_image;}
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -182,5 +183,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-    // public void setUser_image(Blob user_image) {this.user_image = user_image;}
+
 }

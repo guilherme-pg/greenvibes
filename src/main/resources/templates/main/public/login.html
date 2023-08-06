@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{template.html}">
 <head>
     <link rel="stylesheet"  th:href="@{/public/styles/login.css}">
@@ -10,11 +11,11 @@
         <main>
             <div class="account_manage_display" id="account_manage_display">
 
-                <form>
+                <form action="/public/login/perform-login" method="post">
                     <label for="input_login">Login</label>
-                    <input class="input_write" id="input_login">
+                    <input class="input_write" id="input_login" name="login">
                     <label for="input_password">Password</label>
-                    <input class="input_write" id="input_password">
+                    <input class="input_write" id="input_password" name="password">
                     <input class="general_button login_create_button" type="submit" value="Enter">
                 </form>
 
